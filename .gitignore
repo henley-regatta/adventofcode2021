@@ -1,0 +1,33 @@
+#Since I've started trying Rust which produces binaries....
+#Start by IGNORE ALL:
+*
+
+#Unignore stuff in the per-language folders
+#nb: git feature: previously-excluded dirs must be un-ignored before contents.
+!python/
+!go/
+!rust/
+!python/*.py
+!go/*.go
+!rust/*.rs
+
+# Unignore all with extensions
+!*.*
+
+#Ignore everything in the data directory
+data/*
+
+
+
+#Sundry output / temp formats to be ignored
+*pyc
+*input.txt
+*test.txt
+*json
+hello.*
+*pdf
+*prof
+*test
+.o
+*.out
+*.csv
