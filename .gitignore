@@ -10,6 +10,7 @@
 !python/*.py
 !go/*.go
 !rust/*.rs
+!node/*.js
 
 # Unignore all with extensions
 !*.*
