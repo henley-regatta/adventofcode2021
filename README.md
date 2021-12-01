@@ -20,3 +20,8 @@ of course be wrong.
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
   (but it does work)
+
+
+## Go
+  * `go/day1part2.go` - It's not exactly idiomatic but it is better structured and
+  (by virtue of parameters) it can solve both part 1 and part 2 in a single program.

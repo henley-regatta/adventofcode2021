@@ -35,4 +35,4 @@ for i in range(len(windows)) :
     if windows[i] > windows[i-1] :
         increases+=1
 
-print(f"In {len(windows)} sliding windows there were {increases} measurement increases")
+print(f"Over {len(windows)} measurement windows, found {increases} reading increases")
