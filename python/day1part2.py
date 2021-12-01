@@ -3,8 +3,8 @@
 # Given an input "sonar depth readings", use a 3-measurement sliding window
 # to assess increases, reporting the number of increases.
 
-inputfile = "data/day1test.txt"
-#inputfile = "data/day1part1.txt"
+#inputfile = "data/day1test.txt"
+inputfile = "data/day1part1.txt"
 
 lc=0
 windows=[]

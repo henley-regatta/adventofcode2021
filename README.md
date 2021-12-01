@@ -14,3 +14,9 @@ of course be wrong.
   * `python/day1part2.py` - I'm embarrassed how long it took me to come up with a
   way to do sliding-window addition but I did at least make my solution scalable
   to any window size. Always with the off-by-one errors...
+
+
+
+## NodeJS / JavaScript
+  * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
+  (but it does work)
