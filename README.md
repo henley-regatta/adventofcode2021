@@ -25,3 +25,9 @@ of course be wrong.
 ## Go
   * `go/day1part2.go` - It's not exactly idiomatic but it is better structured and
   (by virtue of parameters) it can solve both part 1 and part 2 in a single program.
+
+## Rust
+  * `rust/day1part2.rs` - Again, this is a whatever-works answer. Rust's compiler
+  is quite handy for suggesting work-arounds though. Very similar implementation
+  and capabilities to the Go version, simpel testing suggests it's 3x faster
+  to run, though...
