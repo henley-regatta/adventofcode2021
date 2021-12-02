@@ -14,13 +14,12 @@ of course be wrong.
   * `python/day1part2.py` - I'm embarrassed how long it took me to come up with a
   way to do sliding-window addition but I did at least make my solution scalable
   to any window size. Always with the off-by-one errors...
-
-
+  * `python/day2part1.py` - Very simple algorithm but that was all that was required.
+  Actually I implement an unused instruction - `back` to go backwards. Ho hum.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
   (but it does work)
-
 
 ## Go
   * `go/day1part2.go` - It's not exactly idiomatic but it is better structured and
