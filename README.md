@@ -36,3 +36,6 @@ of course be wrong.
   is quite handy for suggesting work-arounds though. Very similar implementation
   and capabilities to the Go version, simpel testing suggests it's 3x faster
   to run, though...
+  * `rust/day2part2.rs` - Same as Go,Javascript versions - a transliteration of
+  the rather simple Python algorithm to it-compiles-it-must-be-valid Rust. There's
+  more cargo-cult statements in this (copied off t'web) than I'm happy with.
