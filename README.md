@@ -23,6 +23,8 @@ of course be wrong.
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
   (but it does work)
+  * `node/day2part2.js` - Another transliteration of the python solution but I did
+  make use of a `switch{}` statement (python's most obvious lacking feature)
 
 ## Go
   * `go/day1part2.go` - It's not exactly idiomatic but it is better structured and
