@@ -16,6 +16,9 @@ of course be wrong.
   to any window size. Always with the off-by-one errors...
   * `python/day2part1.py` - Very simple algorithm but that was all that was required.
   Actually I implement an unused instruction - `back` to go backwards. Ho hum.
+  * `python/day2part2.py` - Only really a minor elaboration of the part 1 solution
+  although I removed the redundant instruction, and added an unasked-for guard
+  condition to prevent the submarine breaching.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
