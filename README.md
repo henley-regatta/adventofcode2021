@@ -22,6 +22,9 @@ of course be wrong.
   * `python/day3part1.py` - Journeyman bit-bashing, not very elegant but does the
   job. Interesting fact: Comes up with complete garbage if you feed it the day 2
   input...
+  * `python/day3part2.py` - First occurrence of recursion this year. Spent way too
+  long bit-bashing binary to decimal and the final solution is both ugly and inefficient.
+  (first optimisation: 1 set of recursion to find both values.)
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
