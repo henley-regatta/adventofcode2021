@@ -19,6 +19,9 @@ of course be wrong.
   * `python/day2part2.py` - Only really a minor elaboration of the part 1 solution
   although I removed the redundant instruction, and added an unasked-for guard
   condition to prevent the submarine breaching.
+  * `python/day3part1.py` - Journeyman bit-bashing, not very elegant but does the
+  job. Interesting fact: Comes up with complete garbage if you feed it the day 2
+  input...
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
