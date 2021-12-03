@@ -97,4 +97,4 @@ if __name__ == "__main__" :
     CO2ScrubRating = findCO2Rating(srcNumbers,0)
     o2rat=binNumArrayToDecimal(oxyGenRating)
     co2rat=binNumArrayToDecimal(CO2ScrubRating)
-    print(f"Oxygen Generator Rating: {o2rat} {oxyGenRating}, CO2 Scrubber Rating: {co2rat} {CO2ScrubRating} LIFE SUPPORT RATING: {o2rat*co2rat}")
+    print(f"Oxygen Generator Rating: {o2rat} {oxyGenRating}, CO2 Scrubber Rating: {co2rat} {CO2ScrubRating}\nLIFE SUPPORT RATING: {o2rat*co2rat}")

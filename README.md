@@ -31,6 +31,9 @@ of course be wrong.
   (but it does work)
   * `node/day2part2.js` - Another transliteration of the python solution but I did
   make use of a `switch{}` statement (python's most obvious lacking feature)
+  * `node/day3part2.js` - More of a straightforward transliteration than I was
+  hoping for, but it does have the one-recursion-only optimisation. Not sure that
+  makes much difference t.b.h....
 
 ## Go
   * `go/day1part2.go` - It's not exactly idiomatic but it is better structured and
