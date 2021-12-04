@@ -25,6 +25,9 @@ of course be wrong.
   * `python/day3part2.py` - First occurrence of recursion this year. Spent way too
   long bit-bashing binary to decimal and the final solution is both ugly and inefficient.
   (first optimisation: 1 set of recursion to find both values.)
+  * `python/day4part1.py` - As much an exercise in parsing as anything else, although
+  there's quite a lot of bookkeeping done too. Solutions fairly mechanical but it
+  does work. Couple of list comprehensions in there to make it look vaguely on-brand.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
