@@ -28,6 +28,9 @@ of course be wrong.
   * `python/day4part1.py` - As much an exercise in parsing as anything else, although
   there's quite a lot of bookkeeping done too. Solutions fairly mechanical but it
   does work. Couple of list comprehensions in there to make it look vaguely on-brand.
+  * `python/day4part2.py` - You've tried Bingo, now try Anti-Bingo. A fairly simple
+  inversion of the completion criteria from part1 made this a quick (if still horribly
+  ugly) answer.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
