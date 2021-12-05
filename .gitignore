@@ -13,13 +13,12 @@
 !rust/*.rs
 !node/*.js
 
+
 # Unignore all with extensions
 !*.*
 
 #Ignore everything in the data directory
 data/*
-
-
 
 #Sundry output / temp formats to be ignored
 *pyc
@@ -33,3 +32,4 @@ hello.*
 .o
 *.out
 *.csv
+*.png
