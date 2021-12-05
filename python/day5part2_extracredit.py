@@ -4,6 +4,10 @@
 # Given a set of line-definition inputs, find the number of points of
 # intersection of those lines.  Lines can now be diagonal
 # (Blah blah something about geothermal vents)
+#
+# NOTE: Extended to generate a PNG of the grid after adding every vent.
+# This can be assembled into a movie (webm) using:
+#    ffmpeg -framerate 25 -f image2 -i day5part2_%d.png -c:v libvpx-vp9 -pix_fmt yuva420p movie/day5part2.webm
 
 #inputfile="data/day5test.txt"
 inputfile="data/day5part1.txt"
