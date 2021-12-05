@@ -33,6 +33,8 @@ of course be wrong.
   ugly) answer.
   * `python/day5part1.py` - Anticipation of a Part-2 extension means my line-drawing
   algorithm is more complete than needed to get the right answer for part 1.
+  * `python/day5part2.py` - YES, finally I predict the part2 problem correctly.
+  Differs from part 1 by a single IF clause to now plot diagonals.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
