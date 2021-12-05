@@ -81,22 +81,19 @@ def writeGridAsPNG(grid,pngfile) :
     img = []
     height=len(grid)
     width=len(grid[0])
-    print("making visualisation grid")
     for y in range(height) :
-        row = ()
         for x in range(width) :
             p = grid[y][x]
             if p == 1 :
-                row +=(128,128,128,255)
+                img.extend([128,128,128,255])
             elif p > 1 :
-                row +=(128+(10*p),32,32,255)
+                img.extend([128+(10*p),32,32,255])
             else :
-                row +=(0,0,0,0)
-        img.append(row)
-    print("using png.Writer to write image")
+                img.extend([0,0,0,0])
+    print(f"writing image {pngfile}")
     with open(pngfile, 'wb') as f:
         w = png.Writer(width, height, greyscale=False, alpha=True)
-        w.write(f,img)
+        w.write_array(f,img)
 
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
@@ -105,15 +102,9 @@ if __name__ == "__main__" :
     vents = readFileToLineDefinitions(inputfile)
     gridSize=calcExtents(vents)
     grid = [[0 for i in range(gridSize[0]+1)] for j in range(gridSize[1]+1)]
-    for vent in vents :
-        #YES Anticipation IS GREAT NOW I HAVE DIAGONALS:
-        grid = plotVentLineOntoGrid(grid,vent)
+    for i in range(len(vents)) :
+        grid = plotVentLineOntoGrid(grid,vents[i])
+        png = "visualisation/day5part2_" + str(i) + ".png"
+        writeGridAsPNG(grid,png)
 
-    #screendump gets silly with big grids
-    #but would look lovely as a bitmap.....
-    if(len(grid[0]) < 90) :
-        printGrid(grid)
     print(f"Found {countIntersections(grid)} Intersection Points on grid")
-    png = "visualisation/day5part2.png"
-    writeGridAsPNG(grid,png)
-    print(f"See file {png} for visualisation")
