@@ -31,6 +31,8 @@ of course be wrong.
   * `python/day4part2.py` - You've tried Bingo, now try Anti-Bingo. A fairly simple
   inversion of the completion criteria from part1 made this a quick (if still horribly
   ugly) answer.
+  * `python/day5part1.py` - Anticipation of a Part-2 extension means my line-drawing
+  algorithm is more complete than needed to get the right answer for part 1.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
