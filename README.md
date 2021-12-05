@@ -35,7 +35,7 @@ of course be wrong.
   algorithm is more complete than needed to get the right answer for part 1.
   * `python/day5part2.py` - YES, finally I predict the part2 problem correctly.
   Differs from part 1 by a single IF clause to now plot diagonals.
-    * Extra Credit - 'python/day5part2_extracredit.py' produces visualisations
+    * Extra Credit - `python/day5part2_extracredit.py` produces visualisations
       of the answers to part 2. Output for my data [visualised here](https://guided-naafi.org/aoc2021/2021/12/05/VisualisationOfAOC2021Day5Part2.html)
 
 ## NodeJS / JavaScript
