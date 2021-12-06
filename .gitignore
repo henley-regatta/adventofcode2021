@@ -20,6 +20,9 @@
 #Ignore everything in the data directory
 data/*
 
+#Ignore everything in adamcode
+adamcode/*
+
 #Sundry output / temp formats to be ignored
 *pyc
 *input.txt

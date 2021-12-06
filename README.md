@@ -37,6 +37,9 @@ of course be wrong.
   Differs from part 1 by a single IF clause to now plot diagonals.
     * Extra Credit - `python/day5part2_extracredit.py` produces visualisations
       of the answers to part 2. Output for my data [visualised here](https://www.guided-naafi.org/aoc2021/2021/12/05/VisualisationOfAOC2021Day5Part2.html)
+  * `python/day6part1.py` - Simple iterator algorithm, gets the answer in a second.
+  Look, I can tell part2 is going to go all algorithmic-explosion, I just can't see
+  how yet. Let's go have a look...
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
