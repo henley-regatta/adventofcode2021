@@ -40,6 +40,10 @@ of course be wrong.
   * `python/day6part1.py` - Simple iterator algorithm, gets the answer in a second.
   Look, I can tell part2 is going to go all algorithmic-explosion, I just can't see
   how yet. Let's go have a look...
+  * `python/day6part2.py` - Ah there it is. Amazing how finely-tuned that input was
+  so that part 1 is "easy" but part 2 is "hard". Fortunately, fish fall into discrete
+  age ranges so we can put them into buckets by age and work with them en masse. As a
+  result, part2 executes 20 times faster than part 1 even after extending 80->256 days.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
