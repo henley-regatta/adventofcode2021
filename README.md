@@ -47,6 +47,13 @@ of course be wrong.
   * `python/day7part1.py` - Fairly simple algorithm but uses arrays not lists and also
   has an optimisation to only search occupied positions ONCE no matter how many crabs
   are in it. And of course we all know part 2 has the algorithmic explosion coming....
+  * `python/day7part2.py` - It seems we can "get away" with a simple solution-space
+  search algorithm provided we take a couple of steps to optimise. Feels like I've
+  missed a trick to turn this trivial, not least of which will be that I'm a bit of a
+  donkey calculating the cost step-by-step when it's clearly a series. *UPDATE:* oh
+  yes, of course. It's a number series we need over and over. Pre-calculating it
+  and having it as a lookup table makes _complete_ sense. Execution time drops from
+  1 min 16 seconds to 0.58 seconds, a very worthwhile optimisation.....
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
