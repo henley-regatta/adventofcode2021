@@ -44,6 +44,9 @@ of course be wrong.
   so that part 1 is "easy" but part 2 is "hard". Fortunately, fish fall into discrete
   age ranges so we can put them into buckets by age and work with them en masse. As a
   result, part2 executes 20 times faster than part 1 even after extending 80->256 days.
+  * `python/day7part1.py` - Fairly simple algorithm but uses arrays not lists and also
+  has an optimisation to only search occupied positions ONCE no matter how many crabs
+  are in it. And of course we all know part 2 has the algorithmic explosion coming....
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
