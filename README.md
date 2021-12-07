@@ -9,6 +9,9 @@ Answers are structured by language (Python, Go, Rust) and named by day. I'm
 expecting there to be 2 parts per day (most days) as there was last year. I could
 of course be wrong.
 
+If I find the problem itself interesting or if I run out of time, I'm less likely
+to tackle it in other languages. This ought to be obvious from the listing below....
+
 ## Python
   * `python/day1part1.py` - simple, incremental-from-read answer.
   * `python/day1part2.py` - I'm embarrassed how long it took me to come up with a
