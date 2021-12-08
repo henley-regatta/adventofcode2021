@@ -57,6 +57,10 @@ to tackle it in other languages. This ought to be obvious from the listing below
   yes, of course. It's a number series we need over and over. Pre-calculating it
   and having it as a lookup table makes _complete_ sense. Execution time drops from
   1 min 16 seconds to 0.58 seconds, a very worthwhile optimisation.....
+  * `pthon/day8part1.py` - Leaving all the extraneous working in-place because this
+  is an abject lesson in **read the whole exam question before answering**. Part 1
+  question is a lot simpler than the expected "decode the sequences" question I was
+  expecting. That'll be part 2....
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
