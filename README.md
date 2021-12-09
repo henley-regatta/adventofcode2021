@@ -65,7 +65,11 @@ to tackle it in other languages. This ought to be obvious from the listing below
   explains why I took so long, and even then it contains a heuristic approach (read:
   it works but I can't explain why) to decoding 6-segment and 5-segment numbers.
   As a final note as to how _wrong_ I went: my boy beat me by over an hour to the
-  solution after starting way later. 
+  solution after starting way later.
+  * `python/day9part1.py` - Bit of a better start. The Adjacency rules are actually
+  making the code _more_ complicated than it needs to be, but I'm pretty happy with
+  the discriminator code I came up with to do it (much better than mechanical `if`
+    clause testing for boundary conditions). Now can I beat Adam to part 2...
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
