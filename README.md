@@ -77,6 +77,8 @@ to tackle it in other languages. This ought to be obvious from the listing below
   detail than the solution needs as a legacy of me checking my working.  But, in the
   end a reasonably "clean" approach and fast-calculating answer. If I had time I'd
   definitely do a visualisation of the heightmap and it's contours/low points.
+     * `python/day9part2_extracredit.py` - strictly speaking I _didn't_ have time,
+     but this was too delicious to pass up. Output and explanation on t'blog [visualised here](https://www.guided-naafi.org/aoc2021/2021/12/09/VisualisationOfAOC2021Day9Part2.html)
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
