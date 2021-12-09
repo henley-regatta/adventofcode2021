@@ -70,6 +70,13 @@ to tackle it in other languages. This ought to be obvious from the listing below
   making the code _more_ complicated than it needs to be, but I'm pretty happy with
   the discriminator code I came up with to do it (much better than mechanical `if`
     clause testing for boundary conditions). Now can I beat Adam to part 2...
+  * `python/day9part2.py` - Missed a trick (originally) that the "growth algorithm"
+  I use to find the boundaries of basins should _not_ use diagonals and therefore
+  shares an adjacency-test with the part1 answer I'd already proved correct. Some
+  refactoring thus occurred. Also, the working actually stores/calculates way more
+  detail than the solution needs as a legacy of me checking my working.  But, in the
+  end a reasonably "clean" approach and fast-calculating answer. If I had time I'd
+  definitely do a visualisation of the heightmap and it's contours/low points.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
