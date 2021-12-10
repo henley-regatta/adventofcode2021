@@ -78,7 +78,11 @@ to tackle it in other languages. This ought to be obvious from the listing below
   end a reasonably "clean" approach and fast-calculating answer. If I had time I'd
   definitely do a visualisation of the heightmap and it's contours/low points.
      * `python/day9part2_extracredit.py` - strictly speaking I _didn't_ have time,
-     but this was too delicious to pass up. Output and explanation on t'blog [visualised here](https://www.guided-naafi.org/aoc2021/2021/12/09/VisualisationOfAOC2021Day9Part2.html)
+     but this was too delicious to pass up. Output and explanation on t'blog [visualised here](https://www.guided-naafi.org/aoc2021/2021/12/09/VisualisationOfAOC2021Day9Part2.html
+  * `python/day10part1.py` - For something that ought to be a simple parser this took 
+  WAY too much time. I needed about 3 run-ups to get the recursive token finder
+  algorithm correct. And I've still bodged the exit conditions. _And_ I don't think
+  this helps me with part 2 very much either....
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
