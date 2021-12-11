@@ -94,6 +94,10 @@ to tackle it in other languages. This ought to be obvious from the listing below
   coding. Answer took much longer to code than it should, also the fact 
   that I mis-read the "clamp to zero until end of step after flash"
   condition, but the final answer is _sweet_.
+  * `python/day11part2.py` - This one looked too good to be true, I was 
+  sure it was one of those Combinatorial Explosions In Disguise they love
+  so much but, no, it was a genuine gimmie. A very simple adaptation of
+  the part1 answer and the solution presents itself in moments.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
