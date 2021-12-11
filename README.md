@@ -88,6 +88,12 @@ to tackle it in other languages. This ought to be obvious from the listing below
   bookkeeping (I'm not proud of this, it's not good coding practice, it just...works)
   and a lot of phaffing around with the daft scoring mechanism (and working out an
   off-by-one line termination clause I'd missed in the part1 solution) and boomshanka.
+  * `python/day11part1.py` - coding in a YHA using wet string networking edition.
+  Hampered by an odd keyboard, weak internet, and the fact that I'm here
+  with friends in Derbyshire and doing stuff like walking etc instead of 
+  coding. Answer took much longer to code than it should, also the fact 
+  that I mis-read the "clamp to zero until end of step after flash"
+  condition, but the final answer is _sweet_.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.

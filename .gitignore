@@ -36,3 +36,4 @@ hello.*
 *.out
 *.csv
 *.png
+*.swp
