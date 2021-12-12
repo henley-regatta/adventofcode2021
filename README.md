@@ -90,14 +90,18 @@ to tackle it in other languages. This ought to be obvious from the listing below
   off-by-one line termination clause I'd missed in the part1 solution) and boomshanka.
   * `python/day11part1.py` - coding in a YHA using wet string networking edition.
   Hampered by an odd keyboard, weak internet, and the fact that I'm here
-  with friends in Derbyshire and doing stuff like walking etc instead of 
-  coding. Answer took much longer to code than it should, also the fact 
+  with friends in Derbyshire and doing stuff like walking etc instead of
+  coding. Answer took much longer to code than it should, also the fact
   that I mis-read the "clamp to zero until end of step after flash"
   condition, but the final answer is _sweet_.
-  * `python/day11part2.py` - This one looked too good to be true, I was 
+  * `python/day11part2.py` - This one looked too good to be true, I was
   sure it was one of those Combinatorial Explosions In Disguise they love
   so much but, no, it was a genuine gimmie. A very simple adaptation of
   the part1 answer and the solution presents itself in moments.
+  * `python/day11part2_extracredit.py` - Long day spent out of doors, too frazzled
+  to even tempt myself with today's challenge, instead a simple sequence-of-still
+  images-making-up-a-movie animation of yesterday's answer published to the blog
+  [here](https://www.guided-naafi.org/aoc2021/2021/12/12/VisualisationOfAOC2021Day11Part2.html)
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
