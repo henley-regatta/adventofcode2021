@@ -111,6 +111,10 @@ to tackle it in other languages. This ought to be obvious from the listing below
   it's worth the effort looking for them.
   * `python/day13part1.py` - Interesting little problem. Suspect I've mostly
   solved Part2 but we'll see after we run it again. Fairly sparse grid though.
+  * `python/day13part2.py` - Yup, solved by part1 working with the simple removal
+  of a `break` statement. Big appreciation to the AOC master Eric Wastl for the
+  problem and the input sets, that's a lot of fun to solve and _extremely_
+  satisfying.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
