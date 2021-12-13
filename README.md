@@ -118,7 +118,7 @@ to tackle it in other languages. This ought to be obvious from the listing below
   * `python/day13part2_extracredit.py` - Another day's solution absolutely
   screaming out for a visualisation. So here's one that scales the folded grids
   back to a common size and dumps a PNG per fold which is later assembled into
-  a WEBM using `ffmpeg`. View the result [here]((https://www.guided-naafi.org/aoc2021/2021/12/13/VisualisationOfAOC2021Day13Part2.html)
+  a WEBM using `ffmpeg`. View the result [here](https://www.guided-naafi.org/aoc2021/2021/12/13/VisualisationOfAOC2021Day13Part2.html)
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
