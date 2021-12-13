@@ -4,7 +4,11 @@
 # Given input in the form of a series of "dots" on a grid,
 # and a list of fold instructions for the grid,
 # determine the resulting pattern
-# (well part 1 says "count the dots visible after 1 fold")
+#
+# This version does a visualisation as we go....
+# assemble into a slow movie using:
+#    ffmpeg -framerate 2 -f image2 -i visualisation/day13part2_%d.png -c:v libvpx-vp9 -pix_fmt yuva420p visualisation/aoc2021_day13part2.webm
+
 #inputfile = "data/day13test.txt"
 inputfile = "data/day13part1.txt"
 
@@ -110,18 +114,49 @@ def foldLeft(grid,column) :
 
     print(f"grid after foldLeft {column} is {len(outGrid[0])} x {len(outGrid)}")
     return outGrid
-
+# ----------------------------------------------------------------------------
+# note the dimensions are supplied as we'd like constant-size output even
+# though we're folding at each turn... This implies a DIFFERENT scale factor
+# for X and Y.
+def printGridToPNG(grid,pngfile, dimX,dimY) :
+    import png
+    img = []
+    scaleX= dimX // len(grid[0])
+    scaleY= dimY // len(grid)
+    print(f"scaling X by {scaleX} to make {dimX} wide from input width {len(grid[0])}")
+    print(f"scaling Y by {scaleY} to make {dimY} tall from input height {len(grid)}")
+    for y in range(dimY) :
+        for x in range(dimX) :
+            try :
+                p=grid[y//scaleY][x//scaleX]
+            except IndexError :
+                #print(f"attempt to select grid[{y//scaleY}][{x//scaleX}] failed")
+                p=False
+            if p :
+                img.extend([0,0,0])
+            else :
+                img.extend([255,255,255])
+    print(f"writing image {pngfile}")
+    with open(pngfile, 'wb') as f:
+        w = png.Writer(dimX, dimY, greyscale=False, alpha=False)
+        w.write_array(f,img)
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
 # ---------------------------------------------------------------
 if __name__ == "__main__" :
     d=loadGridAndFoldInstructions(inputfile)
     grid=buildInitialGrid(d[0])
-    print(f"There are {countGridPointsSet(grid)} points visible")
+    dimX=len(grid[0])
+    dimY=len(grid)
+    printGridToPNG(grid,"visualisation/day13part2_0.png",dimX,dimY)
+    fCount=0
+    print(f"After {fCount} folds, there are {countGridPointsSet(grid)} points visible")
     for fold in d[1] :
+        fCount+=1
         if fold[0] == 'y' :
             grid = foldUp(grid,fold[1])
         else :
             grid = foldLeft(grid,fold[1])
-        print(f"There are {countGridPointsSet(grid)} points visible")
+        print(f"After {fCount} folds, there are {countGridPointsSet(grid)} points visible")
+        printGridToPNG(grid,"visualisation/day13part2_" + str(fCount) + ".png",dimX,dimY)
     printGrid(grid)
