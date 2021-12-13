@@ -104,7 +104,11 @@ to tackle it in other languages. This ought to be obvious from the listing below
   [here](https://www.guided-naafi.org/aoc2021/2021/12/12/VisualisationOfAOC2021Day11Part2.html)
   * `python/day12part1.py` - Depth-first route finding solution. Not bad. Got beef with
   the final question specification which _appears_ to add an additional condition but
-  actually doesn't. 
+  actually doesn't.
+  * `python/day12part2.py` - Just enough of a rule-change to make you _think_ it's
+  gone all combinatorial-explosion but it turns out the answer's not massively
+  over-complex anyway. I'm sure there's optimisations possible but I don't think
+  it's worth the effort looking for them.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
