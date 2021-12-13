@@ -109,6 +109,8 @@ to tackle it in other languages. This ought to be obvious from the listing below
   gone all combinatorial-explosion but it turns out the answer's not massively
   over-complex anyway. I'm sure there's optimisations possible but I don't think
   it's worth the effort looking for them.
+  * `python/day13part1.py` - Interesting little problem. Suspect I've mostly
+  solved Part2 but we'll see after we run it again. Fairly sparse grid though.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
