@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 7, Part 2
+# Python solution for AOC 2021 Day 7, Part 2
 # Given an input of horizontal positions work out the optimum position to
 # move to given each move costs n(x). It's something about crabs blah blah
 

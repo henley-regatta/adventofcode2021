@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 5, Part 1
+# Python solution for AOC 2021 Day 5, Part 1
 #
 # Given a set of line-definition inputs, find the number of points of
 # intersection of those lines. All lines are vertical or horizontal.

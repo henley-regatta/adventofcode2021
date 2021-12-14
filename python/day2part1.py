@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 2, Part 1
+# Python solution for AOC 2021 Day 2, Part 1
 # Given an input of steering commands, work out the position of the submarine
 
 #inputfile="data/day2test.txt"

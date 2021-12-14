@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 8, Part 2
+# Python solution for AOC 2021 Day 8, Part 2
 # Given an input of messed-up "segment inputs" and a 4-digit output value,
 # work out which signal a-g displays which element of a 7-segment display
 

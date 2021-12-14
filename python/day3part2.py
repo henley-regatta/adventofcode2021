@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 3, Part 1
+# Python solution for AOC 2021 Day 3, Part 1
 # Given an input of 5-bit binary numbers, calculate "oxygen" and "co2 scrubber"
 # values and use that to determine life support rating.
 #

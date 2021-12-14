@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 1, Part 1
+# Python solution for AOC 2021 Day 1, Part 1
 # Given an input "sonar depth readings"
 # count how many entries successively increase from measurement to measurement
 # report the count of increases

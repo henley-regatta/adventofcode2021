@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 4, Part 1
+# Python solution for AOC 2021 Day 4, Part 1
 # Play Bingo. Work out which board wins, and what the final score will
 # be.
 #

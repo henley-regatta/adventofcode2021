@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 4, Part 2
+# Python solution for AOC 2021 Day 4, Part 2
 # Play Bingo. Work out which is the LAST board to win, and what it's final
 # score would be.
 #

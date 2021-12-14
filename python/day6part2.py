@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 1, part 1
+# Python solution for AOC 2021 Day 1, part 1
 #
 # Given a list of numbers of lanternfish representing days-to-reproduce,
 # calculate the number of fish after N days.

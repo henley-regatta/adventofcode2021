@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 3, Part 1
+# Python solution for AOC 2021 Day 3, Part 1
 # Given an input of 5-bit binary numbers, calculate "gamma" and "epsilon"
 # and provide the power consumption as the product of the two.
 #

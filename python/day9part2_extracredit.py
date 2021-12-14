@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 9, Part 2
+# Python solution for AOC 2021 Day 9, Part 2
 #
 # Given an input heightmap, find the "low points" - points where adjacent
 # numbers have a bigger number (nb: number of sides reduces at edges/corners; There

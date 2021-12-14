@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python solution for AOX 2021 Day 1, Part 2
+# Python solution for AOC 2021 Day 1, Part 2
 # Given an input "sonar depth readings", use a 3-measurement sliding window
 # to assess increases, reporting the number of increases.
 
