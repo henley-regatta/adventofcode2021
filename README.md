@@ -119,6 +119,9 @@ to tackle it in other languages. This ought to be obvious from the listing below
   screaming out for a visualisation. So here's one that scales the folded grids
   back to a common size and dumps a PNG per fold which is later assembled into
   a WEBM using `ffmpeg`. View the result [here](https://www.guided-naafi.org/aoc2021/2021/12/13/VisualisationOfAOC2021Day13Part2.html)
+  * `python/day14part1.py` - Another iterative solution. This one gives me the fear
+  that part2 is going all combinatorial and I can't see where there's scope for
+  any simplifications/counting given the rules in play....
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
