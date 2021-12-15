@@ -22,9 +22,21 @@
 #
 # I've done enough checking to know that just working out the output relative
 # frequency of chars isn't enough to come close to predicting the answer.
+###############################################################################
+# The key insight is that if, at stage x you have n occurrences of pattern "ab",
+# which produces insert "c", then at stage x+1 you're going to have n occurrences
+# of pattern "ac", and n occurrences of "cb", AND lose n occurrences of "ab".
+#
+# This needs initialising with the first set of pair matches from the template.
+#
+# The final result is calculated by summing each character of each pair match
+# then dividing the result by two (because each value overlaps). The FIRST and
+# LAST character of the template are then added back to the totals (as they are
+# constant in the output.)
 
-inputfile = "data/day14test.txt"
-#inputfile = "data/day14part1.txt"
+
+#inputfile = "data/day14test.txt"
+inputfile = "data/day14part1.txt"
 
 #This is load-and-forget/use-everywhere so is a candidate for a global var:
 pRules={}
@@ -34,6 +46,7 @@ def loadTemplateAndRules(file) :
     #The template is the first line of input, there's a blank, then
     #everything else is a production rule
     global pRules
+    global cCounter
     template=""
     with open(file,'r') as ifile :
         #Extract the template:
@@ -43,52 +56,48 @@ def loadTemplateAndRules(file) :
             rls = l.strip().split(' -> ')
             if len(rls) == 2 :
                 pRules[rls[0]]=rls[1]
-
     return template
-
-#-----------------------------------------------------------------------
-def iteratePolymer(polyStr) :
-    outAdds=""
-    for x in range(0,len(polyStr)-1) :
-        outAdds += pRules[polyStr[x:x+2]]
-    #print(f"in: {polyStr} adds: {outAdds}")
-    outStr=""
-    for c in range(0,len(polyStr)-1) :
-        outStr += polyStr[c] + outAdds[c]
-    return outStr + polyStr[-1]
-#-----------------------------------------------------------------------
-def countCharType(inStr) :
-    cCount={}
-    for c in inStr :
-        if c not in cCount :
-            cCount[c] = 1
-        else :
-            cCount[c] += 1
-    #We want the biggest and the littlest so sort the output
-    return dict(sorted(cCount.items(), key=lambda x: x[1]))
-#-----------------------------------------------------------------------
-def getPartOneAnswer(polymer) :
-    print(f"Polymer has grown to length {len(polymer)}")
-    cCounts=countCharType(polymer)
-    k=list(cCounts.keys())
-    bigNum=cCounts[k[-1]]
-    smolNum=cCounts[k[0]]
-    print(f"Most numerous element:  {k[-1]} ({bigNum})")
-    print(f"Least numerous element: {k[0]} ({smolNum})")
-    print(f"Part One Answer: {bigNum - smolNum}")
-
 #-----------------------------------------------------------------------
 #-----------------------------------------------------------------------
 #-----------------------------------------------------------------------
 if __name__ == "__main__" :
-    polymer=loadTemplateAndRules(inputfile)
-    print(f"Start : {polymer}")
-    startPairs = [polymer[i:i+2] for i in range(0,len(polymer),n)]
-    pCounter={}
-    lim=10
-    for pair in startPairs :
-        cDepth=iterDepth(pair,lim)
+    template=loadTemplateAndRules(inputfile)
+    #Initialise the pair count against this
+    pCounter= {pair: 0 for pair in pRules.keys()}
+    for pair in [template[i:i+2] for i in range(0,len(template)-1)] :
+        pCounter[pair]+=1
 
-        print(f"{x} : length {len(polymer)}")
+    #print(f"init : {pCounter}")
+    #Now we can iterate for each of the pairs at each stage:
+    for i in range(40) :
+        #Use this form of "cast to list" to get a STATIC reading of the pCounter at iteration time
+        for pair,cCount in list(pCounter.items()) :
+            #print(f"{pair}:{cCount}")
+            if cCount > 0 :
+                head=pair[0] + pRules[pair]
+                tail=pRules[pair] + pair[1]
+                pCounter[head] += cCount
+                pCounter[tail] += cCount
+                pCounter[pair] -= cCount #nb this might not go to zero if head or tail match pair
+        #print(f"{i} : {pCounter}")
 
-    getPartOneAnswer(polymer)
+    #Calculate the final element counts:
+    eCounter = {}
+    for pair in pCounter :
+        for e in pair :
+            if e not in eCounter :
+                eCounter[e] = pCounter[pair]
+            else :
+                eCounter[e] += pCounter[pair]
+    #Correct for "overlaps" and replace the start/finish elements
+    for e in eCounter :
+        eCounter[e] = eCounter[e]//2
+        if e == template[0] or e == template[-1] :
+            eCounter[e] += 1
+
+    elemCounts=dict(sorted(eCounter.items(), key=lambda x: x[1]))
+    k = list(elemCounts.keys())
+    print(f"biggest elem:  {k[-1]} ({elemCounts[k[-1]]})")
+    print(f"smallest elem: {k[0]} ({elemCounts[k[0]]})")
+    bigAnswer = elemCounts[k[-1]] - elemCounts[k[0]]
+    print(f"Magic Answer To Question: {elemCounts[k[-1]] - elemCounts[k[0]]}")

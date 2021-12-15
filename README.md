@@ -122,6 +122,10 @@ to tackle it in other languages. This ought to be obvious from the listing below
   * `python/day14part1.py` - Another iterative solution. This one gives me the fear
   that part2 is going all combinatorial and I can't see where there's scope for
   any simplifications/counting given the rules in play....
+  * `python/day14part2.py` - Oh. Oh dear this is 2020 day 13 all over again. Beaten
+  again by the lad both in time (...hours...) and solution (...I needed a hint
+  on how to iterate against the rule-pairs to get there). Got my star but at
+  what cost?
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.

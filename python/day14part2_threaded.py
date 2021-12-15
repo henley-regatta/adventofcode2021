@@ -8,6 +8,10 @@
 # sequential.)
 
 # This is an attempt to use processor threading to tackle the problem.
+#
+# It doesn't, and cannot, work but I'm keeping it as an example of how to
+# do threading. In a way that fails on Windows but seems to work OK on Linux.
+#
 import concurrent.futures
 numThreads=16
 sliceSize=10000

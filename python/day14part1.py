@@ -66,10 +66,11 @@ if __name__ == "__main__" :
     print(f"start: {polymer}")
     for x in range(1,11) :
         polymer = applyProdRules(polymer)
-        #print(f"{x} : {polymer}")
+        print(f"{x} : {countCharType(polymer)}")
 
     print(f"Polymer has grown to length {len(polymer)}")
     cCounts=countCharType(polymer)
+    print(f"Poly Counts By Char: {cCounts}")
     k=list(cCounts.keys())
     bigNum=cCounts[k[-1]]
     smolNum=cCounts[k[0]]
