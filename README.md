@@ -78,7 +78,7 @@ to tackle it in other languages. This ought to be obvious from the listing below
   end a reasonably "clean" approach and fast-calculating answer. If I had time I'd
   definitely do a visualisation of the heightmap and it's contours/low points.
      * `python/day9part2_extracredit.py` - strictly speaking I _didn't_ have time,
-     but this was too delicious to pass up. Output and explanation on t'blog [visualised here](https://www.guided-naafi.org/aoc2021/2021/12/09/VisualisationOfAOC2021Day9Part2.html
+     but this was too delicious to pass up. Output and explanation on t'blog [visualised here](https://www.guided-naafi.org/aoc2021/2021/12/09/VisualisationOfAOC2021Day9Part2.html)
   * `python/day10part1.py` - For something that ought to be a simple parser this took
   WAY too much time. I needed about 3 run-ups to get the recursive token finder
   algorithm correct. And I've still bodged the exit conditions. _And_ I don't think
@@ -98,10 +98,10 @@ to tackle it in other languages. This ought to be obvious from the listing below
   sure it was one of those Combinatorial Explosions In Disguise they love
   so much but, no, it was a genuine gimmie. A very simple adaptation of
   the part1 answer and the solution presents itself in moments.
-  * `python/day11part2_extracredit.py` - Long day spent out of doors, too frazzled
-  to even tempt myself with today's challenge, instead a simple sequence-of-still
-  images-making-up-a-movie animation of yesterday's answer published to the blog
-  [here](https://www.guided-naafi.org/aoc2021/2021/12/12/VisualisationOfAOC2021Day11Part2.html)
+    * `python/day11part2_extracredit.py` - Long day spent out of doors, too frazzled
+    to even tempt myself with today's challenge, instead a simple sequence-of-still
+    images-making-up-a-movie animation of yesterday's answer published to the blog
+    [here](https://www.guided-naafi.org/aoc2021/2021/12/12/VisualisationOfAOC2021Day11Part2.html)
   * `python/day12part1.py` - Depth-first route finding solution. Not bad. Got beef with
   the final question specification which _appears_ to add an additional condition but
   actually doesn't.
@@ -115,10 +115,10 @@ to tackle it in other languages. This ought to be obvious from the listing below
   of a `break` statement. Big appreciation to the AOC master Eric Wastl for the
   problem and the input sets, that's a lot of fun to solve and _extremely_
   satisfying.
-  * `python/day13part2_extracredit.py` - Another day's solution absolutely
-  screaming out for a visualisation. So here's one that scales the folded grids
-  back to a common size and dumps a PNG per fold which is later assembled into
-  a WEBM using `ffmpeg`. View the result [here](https://www.guided-naafi.org/aoc2021/2021/12/13/VisualisationOfAOC2021Day13Part2.html)
+    * `python/day13part2_extracredit.py` - Another day's solution absolutely
+    screaming out for a visualisation. So here's one that scales the folded grids
+    back to a common size and dumps a PNG per fold which is later assembled into
+    a WEBM using `ffmpeg`. View the result [here](https://www.guided-naafi.org/aoc2021/2021/12/13/VisualisationOfAOC2021Day13Part2.html)
   * `python/day14part1.py` - Another iterative solution. This one gives me the fear
   that part2 is going all combinatorial and I can't see where there's scope for
   any simplifications/counting given the rules in play....
