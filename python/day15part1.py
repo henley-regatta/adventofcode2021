@@ -12,7 +12,6 @@ inputfile = "data/day15part1.txt"
 map=[]
 maxX=0
 maxY=0
-evalSteps=0
 #-----------------------------------------------------------------------
 def loadMap(file) :
     map=[]
@@ -22,7 +21,6 @@ def loadMap(file) :
             if len(c)>0 :
                 map.append(c)
     return map
-
 #-----------------------------------------------------------------------
 def calcNavScores() :
     global costFromScores
@@ -44,7 +42,7 @@ def calcNavScores() :
                 #Cost adds MINIMUM of either option:
                 costFromScores[y][x] += min([costFromScores[y+1][x],costFromScores[y][x+1]])
                 #Score is only the cost to enter this terminal
-            print(f"({x},{y})={costFromScores[y][x]}")
+            #print(f"({x},{y})={costFromScores[y][x]}")
 
 #-----------------------------------------------------------------------
 #-----------------------------------------------------------------------

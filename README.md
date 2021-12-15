@@ -126,9 +126,20 @@ to tackle it in other languages. This ought to be obvious from the listing below
   again by the lad both in time (...hours...) and solution (...I needed a hint
   on how to iterate against the rule-pairs to get there). Got my star but at
   what cost?
-  * `ptthon/day15part1.py` - And this is algorithmic-explosion between the sample
+  * `python/day15part1.py` - And this is algorithmic-explosion between the sample
   data and the actual data. Nice. This is most easily solved by back-tracking from
-  the finish calculating the cost-to-finish from there. 
+  the finish calculating the cost-to-finish from there.
+  * `python/day15part2.py` - So the bad news is that the algorithm I used for part 1
+  not only doesn't work for part 2 but **shouldn't** have worked for part 1. Although
+  it did find the same "optimal" solution for the example data in part 2. After hours
+  of searching for bugs I decided  to cut my losses and do Dijkstra's Algorithm;
+  after wasting more hours waiting for the slow-running algorithms to finish I finally
+  found my "lost assumption" that explains how I got lucky for part 1 (_some_ input
+  data can find the optimal solution using simpler connection rules, but not _all_
+  input data is so lucky). At one point I had an implementation that completes in
+  about 1/2 the time of the current version - mostly through faster selection of
+  next-nearest-node - but endless hacking and tweaking and copy/paste/delete means
+  it's lost forever. On the plus side, at least this time visualisation is [built in](https://www.guided-naafi.org/aoc2021/2021/12/15/VisualisationOfAOC2021Day15Part2.html)
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
