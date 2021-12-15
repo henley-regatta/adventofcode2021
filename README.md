@@ -126,6 +126,9 @@ to tackle it in other languages. This ought to be obvious from the listing below
   again by the lad both in time (...hours...) and solution (...I needed a hint
   on how to iterate against the rule-pairs to get there). Got my star but at
   what cost?
+  * `ptthon/day15part1.py` - And this is algorithmic-explosion between the sample
+  data and the actual data. Nice. This is most easily solved by back-tracking from
+  the finish calculating the cost-to-finish from there. 
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
