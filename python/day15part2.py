@@ -160,6 +160,8 @@ def fast_getNeighbours(k) :
 #-----------------------------------------------------------------------
 # Algorithm freely cribbed from https://isaaccomputerscience.org/concepts/dsa_search_dijkstra
 # Atttempt to speed up algo. Work in coordinates and lists not dicts wherever possible.
+# Note that the "select-from-queue" function is the rate limiter; minimising the time
+# it takes to search for the next cheapest node is the primary objective.
 def fast_dijkstra() :
     import sys
     graph=map_to_graph()
@@ -174,6 +176,7 @@ def fast_dijkstra() :
         adj_node[node] = None
         queue.append(node)
 
+    costHash={0 : [initial]}
     path[initial]=0
 
     import time
@@ -181,14 +184,17 @@ def fast_dijkstra() :
     sInit=time.perf_counter()
     initQ=len(queue)
     while queue:
-        key_min=queue[0]
-        min_val = path[key_min]
-        for n in range(1,len(queue)) :
-            if path[queue[n]] <= min_val :
-                key_min = queue[n]
-                min_val = path[key_min]
-        cur = key_min
+        #Dijkstra says "evaluate the lowest-cost node in the queue"
+        #I've changed this to use a hashed list ordered by cost, instead
+        #of searching though each time. It's about 1 order of magnitude faster
+        #than the simple approach
+        for min_val in sorted(costHash.keys()) :
+            if len(costHash[min_val])>0 :
+                cur=costHash[min_val][0]
+                break
+        cur=costHash[min_val][0]
         queue.remove(cur)
+        costHash[min_val].remove(cur)
 
         for i in graph[cur] :
             alternate = graph[cur][i] + path[cur]
@@ -196,6 +202,10 @@ def fast_dijkstra() :
             #Web page seems to prefer down-first so use this form:
             if path[i] > alternate :
                 path[i] = alternate
+                if alternate in costHash :
+                    costHash[alternate].append(i)
+                else :
+                    costHash[alternate] = [i]
                 adj_node[i] = cur
 
         #Abort after route?
@@ -203,7 +213,7 @@ def fast_dijkstra() :
             print(f"Abort; found route with {len(queue)} remaining")
             break
 
-        if sCounter%100==0 :
+        if sCounter%1000==0 :
             tElapsed=time.perf_counter() - sInit
             procQ=initQ-len(queue)
             pctProc=procQ/initQ
