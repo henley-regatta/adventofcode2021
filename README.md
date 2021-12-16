@@ -146,6 +146,13 @@ to tackle it in other languages. This ought to be obvious from the listing below
   but the fact that I'm manipulating global variables to track the message output
   and the version numbers is _awful_ code.... But, as with all other things, At
   Least It Works.
+  * `python/day16part2.py` - I'm honestly not sure whether I'm proud of this or
+  ashamed. On the plus side, it's a better way of parsing given arbitrary rules
+  (one global variable, the message, with "stack" recursive replacement when
+  single-type sub-packets are encountered). It would fail if back-tracking were
+  required but it's not, so happy days. On the other hand, the pass-back of
+  computed values is horribly hacky with no good way of distinguishing singles
+  from lists. Hence the check-code. On the plus side, at least it's fast.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
