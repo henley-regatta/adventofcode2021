@@ -140,6 +140,12 @@ to tackle it in other languages. This ought to be obvious from the listing below
   about 1/2 the time of the current version - mostly through faster selection of
   next-nearest-node - but endless hacking and tweaking and copy/paste/delete means
   it's lost forever. On the plus side, at least this time visualisation is [built in](https://www.guided-naafi.org/aoc2021/2021/12/15/VisualisationOfAOC2021Day15Part2.html)
+  * `python/day16part1.py` - Ah it's Packet Parsing Day. I wondered when that would
+  come. And, surprise surprise it's nested-packets. And a weird request to boot.
+  I'm not desperately proud of my answer here - the parsing and recursion is fine,
+  but the fact that I'm manipulating global variables to track the message output
+  and the version numbers is _awful_ code.... But, as with all other things, At
+  Least It Works.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
