@@ -162,6 +162,13 @@ to tackle it in other languages. This ought to be obvious from the listing below
   required but it's not, so happy days. On the other hand, the pass-back of
   computed values is horribly hacky with no good way of distinguishing singles
   from lists. Hence the check-code. On the plus side, at least it's fast.
+  * `python/day17part1.py` - **BRUTE FORCE AND IGNORANCE, BABY**. I was having
+  too much fun playing around with Dijkstra algorithms to think about how to
+  solve this _properly_ so instead find a purely-iterative throw-forward solution
+  that is _amazingly_ inefficient. So inefficient is my approach is that when the
+  web page told me my original answer was too low my "solution" was just to increase
+  the throw-limits by a factor of 5 and try again. Which got me the right answer
+  (but might not get you yours!)
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
