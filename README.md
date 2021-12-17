@@ -142,7 +142,13 @@ to tackle it in other languages. This ought to be obvious from the listing below
   it's lost forever. On the plus side, at least this time visualisation is [built in](https://www.guided-naafi.org/aoc2021/2021/12/15/VisualisationOfAOC2021Day15Part2.html)
     * **Updated** 2021-12-16 - Version now uses a faster sorted-hash-by-cost
     lookup for the next-in-queue selector which is about an order of magnitude faster
-    (~5 minutes instead of ~60). Shower Thoughts, eh?
+    (~5 minutes instead of ~60). Shower Thoughts, eh? Also knocked another minute
+    off by,er, pruning the hash list on empty.
+    * **Updated** 2021-12-17 - `python/day15part2_extracredit.py` - Tweaked the
+    optimisations to knock another 10% off processing time, but also extended
+    the visualisation to spit out a frame every X loops, which makes for a nice
+    animation; it uses costs-so-far and path-so-far to make a very pretty looking
+    "growth" animation; results in the [updated blog page](https://www.guided-naafi.org/aoc2021/2021/12/15/VisualisationOfAOC2021Day15Part2.html)
   * `python/day16part1.py` - Ah it's Packet Parsing Day. I wondered when that would
   come. And, surprise surprise it's nested-packets. And a weird request to boot.
   I'm not desperately proud of my answer here - the parsing and recursion is fine,
