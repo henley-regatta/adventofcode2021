@@ -169,6 +169,20 @@ to tackle it in other languages. This ought to be obvious from the listing below
   web page told me my original answer was too low my "solution" was just to increase
   the throw-limits by a factor of 5 and try again. Which got me the right answer
   (but might not get you yours!)
+  * `python/day17part2.py` - **BRUTE FORCE WITH THREADING**. The solution space
+  for this one is _broadly_ the same as for part 1 but needs bigger "boundaries"
+  to be sure all has been caught (the example data proves this; unlike part 1
+  it's possible to succeed even if you start heading down). This being a lazy
+  day I got my answer by just testing all possible trajectories in a very large
+  (2000x2000) "box". While that was running I worked on the version here, which
+  is multi-threaded using `concurrent.futures` and I then wasted about 10x the
+  time the original took to run benchmarking `ProcessPoolExecutor` vs `ThreadPoolExecutor`
+  and the right number of threads - see comments in the code for my findings, but
+  `ThreadPoolExecutor` with `numThreads=2xnumCPUsAvailable` FTW. And, then,
+  after _that_ and giving it a bit of thought plus some discussion reading on
+  Le Reddit I implemented the boundary-shrinking conditions there which _significantly_
+  reduce the search-space and thus runtime. Result is 4x faster than naïve and about
+  6x faster than the version I used to _actually_ submit my response....
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
