@@ -183,6 +183,14 @@ to tackle it in other languages. This ought to be obvious from the listing below
   Le Reddit I implemented the boundary-shrinking conditions there which _significantly_
   reduce the search-space and thus runtime. Result is 4x faster than naïve and about
   6x faster than the version I used to _actually_ submit my response....
+    * *Update 2021-12-18*: Shower Thoughtz this morning told me my threading approach
+    was too naïve - the workload of a single trajectory wasn't big enough to justify
+    the overhead. So instead chunk the list to be tested into `numThreads` blocks
+    and spawn a "thread" or "process" for each chunk. _Voila_ there goes the
+    weird result from yesterday _and_ here comes massive parallelism gainz. Best
+    result now uses `ProcessPoolExecutor` with 24 threads and gets 10x speed up over
+    the single-threaded case (even with optimisations, so roughly 20x quicker than
+    the brutest-of-force version I used to submit the actual result).
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.

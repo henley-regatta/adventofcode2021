@@ -20,8 +20,24 @@ import sys
 # 100 threads = 75 seconds                  16.1 seconds
 # Running "single threaded" (numThreads=1, but with all the scaffolding in place)
 # gives ~54 seconds for the test result.
+#
+# Using a "chunked" model - call numThreads threads each given (totaltrajectories)/numThreads
+# to process - has the following results on "live" data (~4x bigger than test above) :
+# ThreadPoolExecutor/1  thread:   67.1 seconds    low-power profile
+# ThreadPoolExecutor/12 threads:  68.7 seconds    low-power profile
+# ProcessPoolExecutor/1 thread:   65.6 seconds    low-power profile
+# ProcessPoolExecutor/6 thread:   25.8 seconds    low-power profile
+# ProcessPoolExecutor/12 threads: 10.8 seconds    low-power profile
+# ProcessPoolExecutor/12 threads: 8.1  seconds    performance profile
+# ProcessPoolExecutor/24 threads: 6.6  seconds    performance profile
+# ProcessPoolExecutor/48 threads: 6.7  seconds    performance profile
+# (I changed to Ryzen Performance Profile after I noticed >12 threads was causing
+#  CPU frequency changes "between" the idle/high power stakes thus making results
+#  hard to interpret. Looks like I'm keeping about 25% performance "locked away" under
+#  the low-power profile I use to keep temps low....)
 import concurrent.futures
-numThreads=12
+# I changed my WSL2 config to give me 6 CPUs....
+numThreads=24
 
 # TEST:
 testLoc={ 'x' : [20,30], 'y' : [-10,-5]}
@@ -100,6 +116,15 @@ def inTargetZone(pos) :
     return False
 
 #-----------------------------------------------------------------------
+# Needed to scatter/gather test results in multithreading.
+def marshalTestBlock(block) :
+    outres=[]
+    for t in block :
+        r=plotProbeForward(t)
+        if r is not None :
+            outres.append(r)
+    return outres
+#-----------------------------------------------------------------------
 #For part 2 we don't need the maximum heights, we just need the initial
 #velocities that worked and a count of same.
 def solveByBruteForce(targetLocation, maxVel) :
@@ -123,15 +148,19 @@ def solveByBruteForce(targetLocation, maxVel) :
         for x in range(maxX) :
             testTrajectories.append([x,y])
     print(f"Testing against {len(testTrajectories)} potential trajectories with velocity limit {maxVel}")
-    #with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
-    with concurrent.futures.ThreadPoolExecutor(max_workers=numThreads) as executor:
-        future_to_trajResult = {executor.submit(plotProbeForward,vel) : vel for vel in testTrajectories}
+    #Split into numThreads blocks to minimise the process/thread bookkeeping:
+    bSize=len(testTrajectories)//numThreads
+    testBlocks = [testTrajectories[i:i+bSize] for i in range(0,len(testTrajectories),bSize)]
+    print(f"Tackling as {len(testBlocks)} blocks of size {bSize} or so")
+    with concurrent.futures.ProcessPoolExecutor(max_workers=numThreads) as executor:
+    #with concurrent.futures.ThreadPoolExecutor(max_workers=numThreads) as executor:
+        future_to_trajResult = {executor.submit(marshalTestBlock,blk) : blk for blk in testBlocks}
         for future in concurrent.futures.as_completed(future_to_trajResult) :
             s = future_to_trajResult[future]
             try:
                 res=future.result()
                 if res is not None :
-                    successfulTrajectories.append(res)
+                    successfulTrajectories.extend(res)
                 else :
                     failedTrajectories+=1
                 if (len(successfulTrajectories)+failedTrajectories)%10000 == 0 :
