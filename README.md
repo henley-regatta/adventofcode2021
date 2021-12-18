@@ -189,7 +189,7 @@ to tackle it in other languages. This ought to be obvious from the listing below
     and spawn a "thread" or "process" for each chunk. _Voila_ there goes the
     weird result from yesterday _and_ here comes massive parallelism gainz. Best
     result now uses `ProcessPoolExecutor` with 24 threads and gets 10x speed up over
-    the single-threaded case (even with optimisations, so roughly 20x quicker than
+    the single-threaded case (even with optimisations, so well over 20x quicker than
     the brutest-of-force version I used to submit the actual result).
 
 ## NodeJS / JavaScript
