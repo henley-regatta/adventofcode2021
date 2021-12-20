@@ -191,6 +191,11 @@ to tackle it in other languages. This ought to be obvious from the listing below
     result now uses `ProcessPoolExecutor` with 24 threads and gets 10x speed up over
     the single-threaded case (even with optimisations, so well over 20x quicker than
     the brutest-of-force version I used to submit the actual result).
+  * `python/day18part1.py` - I **HATED** this problem. When you analyse the
+  input, the specification, you _try different representations_ and **then** end
+  up deciding that "This is easiest if I treat this as a string and perform a series
+  of string manipulations on it" you know you're either as thick as two short planks
+  _or_ the problem's just pointlessly over-complicated. Anyway, here's Wonderwall.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
