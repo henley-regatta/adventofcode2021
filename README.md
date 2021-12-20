@@ -196,6 +196,9 @@ to tackle it in other languages. This ought to be obvious from the listing below
   up deciding that "This is easiest if I treat this as a string and perform a series
   of string manipulations on it" you know you're either as thick as two short planks
   _or_ the problem's just pointlessly over-complicated. Anyway, here's Wonderwall.
+  * `python/day18part2.py` - A "gimmie" after part1. Looks like it might go all
+  combinatorial-explosion, but with the limited number in the input set, is actually
+  not worth doing anything but a brute-force all-against-all comparison. So I Did.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
