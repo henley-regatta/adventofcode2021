@@ -208,6 +208,13 @@ to tackle it in other languages. This ought to be obvious from the listing below
   required steps but I cannot blame him for _any_ of the mess that has ensued.
   This is by far the record for longest I've taken on any _part_ of a day's solution
   with thinking about it, off and on, for a whole week before getting my answer.
+  * `python/day19part2.py` - A light refresher, really, after the pain of part one.
+  Especially as I'd been using a vague analogue of "Manhattan Distance" in some of
+  my failed attempts to tackle part one (hint: no, you _cannot_ ignore rotations
+  when comparing probe pair distances in part one, although you *can* use a simpler
+  length discriminator to narrow the search-space if you like). Anyway, a slight
+  adaptation of the probe transform/merge logic worked to get scanners into a single
+  coordinate system and from there the answer was trivial to arrive at.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
