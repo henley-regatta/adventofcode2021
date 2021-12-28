@@ -199,6 +199,15 @@ to tackle it in other languages. This ought to be obvious from the listing below
   * `python/day18part2.py` - A "gimmie" after part1. Looks like it might go all
   combinatorial-explosion, but with the limited number in the input set, is actually
   not worth doing anything but a brute-force all-against-all comparison. So I Did.
+  * `python/day19part1.py` - Absolute Clown Shoes. A complete curdled trifle of a
+  solution. I was going to say "pathetic design but the implementation is OK" until
+  I got about half way through the implementation and realised it was just a total
+  anti-pattern. An incredibly inefficient implementation of a very poor solution
+  design whose _only_ positive feature is that it is, after all, All My Own Work.
+  OK OK I did use The Lad as (effectively) a Rubber Duck to talk through the
+  required steps but I cannot blame him for _any_ of the mess that has ensued.
+  This is by far the record for longest I've taken on any _part_ of a day's solution
+  with thinking about it, off and on, for a whole week before getting my answer.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
