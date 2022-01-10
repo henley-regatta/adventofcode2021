@@ -224,6 +224,14 @@ to tackle it in other languages. This ought to be obvious from the listing below
   have to give is "infinity" because an infinite sized image has an infinite border
   but that's clearly garbage. Solution is to over-grow the source image and clip it
   back by 1 after enhancement. That's frustrating.
+  * `python/day20part2.py` - Needed a hint from the sub-reddit on how to handle the
+  changing conditions of the input data (the clue being the "infinite border" doesn't
+  initialise to zero _at every step_ because of the enhancement condition for all-zeros.)
+  After that it was just a matter of getting the growth and clip factors correct, the
+  output being juust small enough to fit on a screen to tell me there's a definite
+  pattern in there. Mark today down as Frustrating, because it seemed like there was
+  a _lot_ of interpretation of unstated requirements required to get there. Or I'm
+  thick. One or the other.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
