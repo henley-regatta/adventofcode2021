@@ -215,6 +215,15 @@ to tackle it in other languages. This ought to be obvious from the listing below
   length discriminator to narrow the search-space if you like). Anyway, a slight
   adaptation of the probe transform/merge logic worked to get scanners into a single
   coordinate system and from there the answer was trivial to arrive at.
+  * `python/day20part1.py` - Happy New Year to all our reader!. Took a long break.
+  Found this frustrating - sample data worked fine but the "live" data threw too
+  big numbers, because it maps all-zeros to a 1 in the enhancement algorithm. After
+  2 iterations this leaves a "border" around the image no matter how big it's scaled.
+  The problem specification says "consider the image is infinite" which, I'd argue,
+  leaves wriggle room there as to how to process it - *technically* the answer you
+  have to give is "infinity" because an infinite sized image has an infinite border
+  but that's clearly garbage. Solution is to over-grow the source image and clip it
+  back by 1 after enhancement. That's frustrating.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
