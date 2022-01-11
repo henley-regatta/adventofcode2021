@@ -232,6 +232,10 @@ to tackle it in other languages. This ought to be obvious from the listing below
   pattern in there. Mark today down as Frustrating, because it seemed like there was
   a _lot_ of interpretation of unstated requirements required to get there. Or I'm
   thick. One or the other.
+  * `python/day21part1.py` - Oh god this was too easy, part 2 is going to be a nightmare....
+  OK so I got some of my modular arithmetic wrong, I didn't read the full question before
+  coding, and I wouldn't stand by the code quality. But it works fairly well and gives
+  the right answer. Job Done.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
