@@ -1,4 +1,4 @@
-# adventofcode2021
+mv # adventofcode2021
 
 These are my answers for the [2021 Advent of Code](https://adventofcode.com/2021)
 
@@ -236,6 +236,17 @@ to tackle it in other languages. This ought to be obvious from the listing below
   OK so I got some of my modular arithmetic wrong, I didn't read the full question before
   coding, and I wouldn't stand by the code quality. But it works fairly well and gives
   the right answer. Job Done.
+  * `python/day21part2.py` - Ah, adventures in the multiverse. I got the "this is
+  a deterministic game" thing, I even got as far as deriving all possible ending
+  positions (and score increments) from a start point, I got the combinatorial
+  explosion in the number of games. And then I fell over trying to work out a
+  data-structure to represent the turns and interactions between the players.
+  *Two weeks* later the fact that this is effectively a grid with player positions
+  as the coordinates (and "number of times this position occurs") as the value in the
+  grid came to me. Got a bit stuck after that thinking I could extend to third
+  dimension tracking the score in play but once I realised I needed to track each
+  player's scores independently and thus a 4-dimensional hypercube was the right
+  structure the answer came easily (!!!)
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
