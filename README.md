@@ -247,6 +247,11 @@ to tackle it in other languages. This ought to be obvious from the listing below
   dimension tracking the score in play but once I realised I needed to track each
   player's scores independently and thus a 4-dimensional hypercube was the right
   structure the answer came easily (!!!)
+  * `python/day22part1.py` - This is, as specified, bit-flipping on a relatively
+  small 3-dimensional array. So naturally I wasted time building all sorts of
+  geometric-manipulation functions because _I KNOW_ part 2 is going to drop the
+  obvious "constrain yourself to this small grid" restriction. And then at some
+  point I got bored and went for the simple answer anyway.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
