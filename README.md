@@ -252,6 +252,24 @@ to tackle it in other languages. This ought to be obvious from the listing below
   geometric-manipulation functions because _I KNOW_ part 2 is going to drop the
   obvious "constrain yourself to this small grid" restriction. And then at some
   point I got bored and went for the simple answer anyway.
+  * `python/day22part2.py` - Yup, there goes the restriction. Part1's naïve
+  algorithm _would_ work, provided you had petabytes of memory available. I quickly
+  grasped the essence of the problem: Keep a list of cuboids, when adding a new one
+  see which ones it intersects with and track the remainders. Took ~1 week to
+  implement the necessary cubic functions (principally `cubicRemainder()` to work
+  out the cuboids _remaining_ after subtracting an intersection from a master).
+  Then I got stuck with the master algorithm, my main mistake being that I was
+  always keeping track of "both sides" of an intersection operation, which is both
+  incredibly slow and, er, wrong. I eventually found someone's answer online that
+  I could actually understand to give me the key missing insight which is that what's
+  required is to "clear all the cuboids out of the way" of the new cuboid being dealt
+  with (using the aforementioned `cubicRemainder()` function to drop volumes "in the
+  way"), and then at the end either insert the new cuboid (for an "on" operation) or
+  just ignore it (for an "off"). After that it was a simple matter of a full days'
+  debugging to work out that one corner-cuboid operation had a misplaced dimension
+  that somehow managed to avoid all my test cases without showing up and, boomshanka,
+  an answer. On the plus side, I learned enough about `matplotlib` to confidently
+  plot 3d cubes in Python.
 
 ## NodeJS / JavaScript
   * `node/day1part2.js` - Look, this is a straightforward non-idiomatic translation.
